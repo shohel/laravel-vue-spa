@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+body{
+    font-family:Raleway,sans-serif;
+}
+
+.navbar-laravel{background-color:#fff;-webkit-box-shadow:0 2px 4px rgba(0,0,0,.04);box-shadow:0 2px 4px rgba(0,0,0,.04)}
+.blog-body{
+    margin-top: 20px;
+}
+.card.card-blog-post {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+}
+.error-no-data{
+    text-align: center;
+    padding: 100px 0;
+    margin: 100px 0;
+}
+
+/**************** Loader ***************/
+/*.loader-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    background: #fff;
+}*/
+.loader-container {
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.regot-loader {
+    font-size: 20px;
+    position: relative;
+    width: 100px;
+    height: 10px;
+    margin: 20px;
+}
+
+.regot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffc107;
+    position: absolute;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.regot1, .regot2 {
+    left: 0;
+}
+
+.regot3 { left: 1.5em; }
+
+.regot4 { left: 3em; }
+
+.regot5 { left: 4.5em; }
+
+@keyframes show {
+    from { transform: scale(0.001); }
+    to { transform: scale(1); }
+}
+
+@keyframes remove {
+    from { transform: scale(1); }
+    to { transform: scale(0.001); }
+}
+
+@keyframes shift {
+    to { transform: translateX(1.5em) }
+}
+.regot1 {
+    animation-name: show;
+}
+
+.regot2, .regot3, .regot4 {
+    animation-name: shift;
+}
+
+.regot5 {
+    animation-name: remove;
+}
+/**************** #/Loader ***************/
+
+
+footer{
+    margin-top: 100px;
+}
