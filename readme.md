@@ -11,6 +11,8 @@ See the live example at project
 ```
 git clone git@github.com:mh-shohel/laravel-vue-spa.git
 cd laravel-vue-spa
+sudo cp .env.example .env
+php artisan key:generate
 ```
 ######2. Create database to MySQL and import
   
