@@ -6,7 +6,7 @@ See the live example at project
 
 ## How to run (Install)
 
-######1. Clone the project to your local server or your remote server
+1. Clone the project to your local server or your remote server
 
 ```
 git clone git@github.com:mh-shohel/laravel-vue-spa.git
@@ -14,12 +14,12 @@ cd laravel-vue-spa
 sudo cp .env.example .env
 php artisan key:generate
 ```
-######2. Create database to MySQL and import
+2. Create database to MySQL and import
   
 ```
 A Ready database I've proivded, you will found it root/sql-backup directory import
 ```
-######3. Place your database information at .env file located at root directory
+3. Place your database information at .env file located at root directory
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -30,9 +30,9 @@ DB_PASSWORD=root
 
 ```
 
-####Congratulation, you are set, now browse your application using browser address
+Congratulation, you are set, now browse your application using browser address
 
-###### VueJS source?
+VueJS source?
 ```
 VueJS source is located at root/public/assets/vue-js
 VueJS build you will found at root/public/assets/js/vue.js
