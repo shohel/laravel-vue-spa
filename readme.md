@@ -37,3 +37,7 @@ VueJS source?
 VueJS source is located at root/public/assets/vue-js
 VueJS build you will found at root/public/assets/js/vue.js
 ```
+
+##Live Project
+
+[http://54.198.234.101](http://54.198.234.101)
