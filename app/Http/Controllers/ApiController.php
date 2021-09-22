@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class ApiController extends Controller {
 	//
@@ -37,7 +38,7 @@ class ApiController extends Controller {
 			$tagsArr = explode( ',', $tags );
 			foreach ( $tagsArr as $tag ) {
 				$tag      = trim( $tag );
-				$tag_slug = str_slug( $tag );
+				$tag_slug = Str::slug( $tag );
 				$get_tag  = Tag::whereTagSlug( $tag_slug )->first();
 				if ( $get_tag ) {
 					$attached_tags[] = $get_tag->id;
@@ -165,7 +166,7 @@ class ApiController extends Controller {
 		];
 
 		$this->validate( $request, $rules );
-		$user_name      = str_slug( $request->user_name );
+		$user_name      = Str::slug( $request->user_name );
 		$duplicate_find = User::where( 'user_name', $request->user_name )->orWhere( 'email', $request->email )->first();
 		if ( $duplicate_find ) {
 			return [ 'success' => false, 'msg' => 'User Name or email has already been used' ];
